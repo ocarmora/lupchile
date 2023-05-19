@@ -11,6 +11,49 @@
 
 <body>
 
+  <div class="modal" style="display: none;">
+    <div class="modal__container">
+      <img src="images/francisco-ackermann-formulario.png" alt="Francisco Ackermann">
+      <div class="form">
+        <h2>¡Estás a un click de la Semana Inmobiliaria!</h2>
+        <p>No te lo pierdas este 15, 16, 17 y 18 de mayo.</p>
+        <form action="">
+          <div class="input-container">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" value="">
+          </div>
+          <div class="input-container">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email">
+          </div>
+          <div class="input-container">
+            <label for="phone">Teléfono:</label>
+            <input type="tel" id="phone">
+          </div>
+          <div class="input-container">
+            <label for="range">¿Cuál de estos rangos representa tus ingresos mensuales?:</label>
+            <select name="range" id="range">
+              <option value="500000-999000">Entre $500.000 y $999.000</option>
+              <option value="1000000-1999000">Entre $1.000.000 y $1.999.000</option>
+              <option value="2000000-4999000">Entre $2.000.000 y $4.999.000</option>
+              <option value="+5000000">Más de $5.000.000</option>
+            </select>
+          </div>
+          <div class="input-container">
+            <label for="subject">¿Cuál es la razón que te motiva a invertir?:</label>
+            <select name="subject" id="subject">
+              <option value="casa-propia">Quiero mi casa propia</option>
+              <option value="inversion">Inversión</option>
+              <option value="jubilacion">Jubilación</option>
+            </select>
+          </div>
+          <span>* Al inscribirte aceptas nuestra <a href="#">política de privacidad</a>.</span>
+          <button type="submit" class="button">Inscribirme</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <header>
     <div class="container">
       <img src="images/lup-logo.jpeg" alt="Lup | Lanzamientos Inmobiliarios">
@@ -150,6 +193,38 @@
     </div>
   </footer>
 
+  <script>
+    const buttons = document.querySelectorAll('button');
+    const modal = document.querySelector('.modal');
+    const body = document.querySelector('body');
+    let modalOpen = false;
+
+    const closeModal = () => {
+      modal.style.display = 'none'
+      body.style.overflow = 'auto';
+    }
+
+    const openModal = () => {
+      modal.style.display = 'flex'
+      body.style.margin = 0;
+      body.style.height = '100%';
+      body.style.overflow = 'hidden';
+      modalOpen = true;
+    }
+
+    buttons.forEach(element => {
+      element.addEventListener('click', openModal)
+    });
+
+    window.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        closeModal()
+      }
+    })
+  </script>
+
 </body>
+
+
 
 </html>
