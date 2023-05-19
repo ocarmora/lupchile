@@ -270,6 +270,9 @@ footer {
 }
 
 @media only screen and (min-width: $desktopBreakpoint) {
+  h1 {
+    font-size: 3rem;
+  }
   .container {
     max-width: 1200px;
   }
@@ -302,6 +305,7 @@ footer {
     img {
       order: 2;
       width: 40rem;
+      margin-right: -5rem;
     }
 
     &__text {

@@ -231,6 +231,9 @@ footer {
 }
 
 @media only screen and (min-width: 600px) {
+  h1 {
+    font-size: 3rem;
+  }
   .container {
     max-width: 1200px;
   }
@@ -258,6 +261,7 @@ footer {
   .hero img {
     order: 2;
     width: 40rem;
+    margin-right: -5rem;
   }
   .hero__text {
     align-items: flex-start;
