@@ -2,6 +2,7 @@ $colorPrimary: #fffe03;
 $colorBlack: #000000;
 $colorText: #0d0d0d;
 $fontSemiBold: 600;
+$desktopBreakpoint: 600px;
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
 
@@ -36,6 +37,7 @@ a {
   max-width: 350px;
   justify-self: center;
   align-self: center;
+  margin: 0 auto;
 }
 
 .text {
@@ -264,5 +266,142 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: inherit;
+  }
+}
+
+@media only screen and (min-width: $desktopBreakpoint) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .section {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+
+    h2 {
+      gap: 3rem;
+    }
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: row;
+
+    .hero-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    h1,
+    p {
+      text-align: left;
+    }
+
+    img {
+      order: 2;
+      width: 40rem;
+    }
+
+    &__text {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+
+  .about {
+    padding: 5rem 0;
+  }
+
+  .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .items-container {
+      max-width: 35rem;
+    }
+  }
+
+  .speaker {
+    padding: 3rem 0;
+
+    &-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 5rem 0;
+
+      justify-content: space-between;
+
+      img {
+        max-width: 30rem;
+      }
+    }
+
+    &-info {
+      gap: 1rem;
+
+      &__name {
+        display: flex;
+        align-items: end;
+        font-size: 2rem;
+        gap: 0.5rem;
+      }
+
+      ul {
+        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        list-style: none;
+
+        li::before {
+          content: "\2022";
+          color: #dadada;
+          font-weight: bold;
+          display: inline-block;
+          width: 1em;
+          margin-left: -1em;
+        }
+      }
+    }
+  }
+
+  .call-to-action {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      gap: 1rem;
+
+      h2 {
+        gap: 1rem;
+        align-items: start;
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    p::after {
+      content: "|";
+      margin: 0 0.5rem;
+    }
+
+    &__contact {
+      flex-direction: row;
+    }
   }
 }
