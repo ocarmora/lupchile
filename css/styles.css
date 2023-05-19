@@ -322,7 +322,7 @@ footer {
   .modal__container {
     background-color: #fff;
     z-index: 100;
-    padding: 2rem 1rem;
+    padding: 2rem 5rem;
     border-radius: 0.5rem;
     display: flex;
     flex-direction: row;
