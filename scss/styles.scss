@@ -197,6 +197,11 @@ header {
   display: flex;
   flex-direction: column;
 
+  &-container {
+    display: flex;
+    flex-direction: column;
+  }
+
   &-info {
     display: flex;
     flex-direction: column;
@@ -207,15 +212,6 @@ header {
       align-items: end;
       font-size: 2rem;
       gap: 0.5rem;
-
-      // &::after {
-      //   // content: url("../svg/arrow.svg");
-      //   content: "";
-      //   position: absolute;
-      //   width: 100%;
-      //   height: 6px;
-      //   background-color: red;
-      // }
     }
 
     ul {
@@ -244,6 +240,12 @@ header {
   gap: 1.5rem;
   padding: 1rem;
   text-align: center;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 }
 
 footer {
